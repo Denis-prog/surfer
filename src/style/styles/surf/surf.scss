@@ -1,0 +1,499 @@
+:root {
+    --surf-map-point-position-top : 50%;
+    --surf-map-point-position-left: 15%;
+}
+
+.surf {
+    background         : url("../img/surf/surf-bg.png") no-repeat;
+    background-position: 100% 15px;
+    background-size    : auto;
+
+    &-content {
+
+        &-top {
+
+            &-location {
+                margin-bottom: 0;
+            }
+
+            &-map {
+                position  : relative;
+                max-height: 635px;
+                max-width : 1200px;
+                margin    : 105px auto 35px;
+
+                &-img {
+                    display: block;
+                    width  : 100%;
+                    height : auto;
+                }
+
+                &:after {
+                    content       : attr(data-content);
+                    font-size     : $font-size-xl;
+                    letter-spacing: 8px;
+                    position      : absolute;
+                    transform     : rotate(-90deg) translateX(0%);
+                    right         : 50px;
+                    top           : 80%;
+                    width         : 0;
+                    height        : 0;
+                    white-space   : nowrap;
+                }
+
+                &-point {
+                    width        : 10px;
+                    height       : 10px;
+                    border       : 10px solid $surf-slider-control-map-point-bg;
+                    border-radius: 50%;
+                    position     : absolute;
+
+                    &-first {
+                        top : 50%;
+                        left: 15%;
+                    }
+
+                    &-second {
+                        top : 82%;
+                        left: 89%;
+                    }
+
+                    &-third {
+                        top : 61%;
+                        left: 83%;
+                    }
+
+                    &-fourth {
+                        top : 36%;
+                        left: 45%;
+                    }
+
+                    &-fifth {
+                        top : 85%;
+                        left: 54%;
+                    }
+
+                    &-sixth {
+                        top : 47%;
+                        left: 42%;
+                    }
+
+                    &-seventh {
+                        top : 80%;
+                        left: 26%;
+                    }
+
+                    &-eigth {
+                        top : 60%;
+                        left: 42%;
+                    }
+
+                    &-description {
+                        position  : absolute;
+                        top       : 0;
+                        left      : 0;
+                        min-width : 283px;
+                        min-height: 216px;
+                        background: transparentize($surf-map-point-description-bg, .8);
+
+                        &-location {
+                            margin: 25px 0 0 25px;
+
+                            &-title {
+                                margin-bottom : 15px;
+                                padding-bottom: 15px;
+                                font-weight   : 800;
+                                font-size     : $font-size-xl;
+                                border-bottom : 1px solid $surf-map-point-description-location-title-border;
+                                display       : inline-block;
+                            }
+
+                            &-subtitle {
+                                text-transform: capitalize;
+                                font-size     : $font-size-l;
+                            }
+                        }
+
+                        &-weather {
+                            width          : 80%;
+                            margin         : 30px auto 0;
+                            display        : flex;
+                            justify-content: space-between;
+                            text-align     : center;
+
+                            &-item {
+                                padding-top: 35px;
+                            }
+
+                            &-wave {
+                                background         : url("../img/surf/surf_map_point_description_weather_wave_icon.png") no-repeat;
+                                background-position: 0 top;
+                            }
+
+                            &-tide {
+                                background: url("../img/surf/surf_map_point_description_weather_tide_icon.png") no-repeat top;
+                            }
+
+                            &-wind {
+                                background: url("../img/surf/surf_map_point_description_weather_wind_icon.png") no-repeat top;
+                            }
+
+                            &-count {
+                                font-weight  : 800;
+                                font-size    : $font-size-l;
+                                margin-bottom: 5px;
+                            }
+
+                            &-subtext {
+                                font-weight: 300;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-slider {
+        width     : 1200px;
+        position  : relative;
+        min-height: 726px;
+        height    : 1px;
+        margin    : 0 auto;
+        overflow  : hidden;
+
+        &-control-button {
+            margin: 0 50px 50px auto;
+        }
+
+        &-container {
+            position: relative;
+            margin  : 50px auto 0px;
+        }
+
+        &-item {
+            min-height         : 637px;
+            height             : 1px;
+            position           : absolute;
+            padding            : 0;
+            margin             : 0;
+            background-size    : cover;
+            background-repeat  : no-repeat;
+            background-position: 57% 0%;
+            filter             : brightness(80%);
+
+            &:nth-child(1),
+            &:nth-child(3) {
+                animation                : moveSlideEven .8s 1 forwards;
+                animation-timing-function: cubic-bezier(.9, .1, .1, .9);
+            }
+
+            &:nth-child(2),
+            &:nth-child(4) {
+                animation                : moveSlideOdd .8s 1 forwards ease-in-out;
+                animation-timing-function: cubic-bezier(.9, .4, .4, .9);
+            }
+
+            &:nth-child(5) {
+                margin-top: 89px;
+            }
+
+            &-inner {
+                background: transparentize($surf-slider-item-inner-bg, .4);
+                width     : 100%;
+                height    : 100%;
+            }
+
+            &-middle {
+                position: relative;
+                height: 350px;
+                overflow: hidden;
+            }
+
+            &-title {
+                font-weight: 800;
+                max-width  : 250px;
+                height: 190px;
+                overflow: hidden;
+                line-height: 1.2;
+                margin-left: 100px;
+                padding    : 70px 45px 45px 0px;
+                font-size  : $font-size-xxxxl;
+            }
+
+            &-location {
+                font-size     : $font-size-xl;
+                letter-spacing: 8px;
+                transform     : rotate(-90deg);
+                position      : absolute;
+                left          : 15px;
+                bottom        : 0;
+                width         : 0;
+                height        : 0;
+                white-space   : nowrap;
+
+                &>span {
+                    font-weight: 100;
+                }
+            }
+
+            &-btn {
+                opacity : 0;
+                position: absolute;
+                bottom  : 0;
+                left    : 0;
+                right   : 0;
+            }
+        }
+    }
+}
+
+.surf-slider-item-active-show {
+    color: $surf-slider-item-active-show-color;
+
+    .surf-slider-item-inner {
+        transition-duration: 1.5s;
+        background-color   : transparent;
+    }
+
+    .surf-slider-item-btn {
+        transition-duration: 1s;
+        opacity            : 1;
+    }
+}
+
+.surf-slider-control-map-point {
+    width        : 10px;
+    height       : 10px;
+    background   : $surf-slider-control-map-point-bg;
+    border       : 10px solid $surf-slider-control-map-point-bg;
+    border-radius: 50%;
+    position     : absolute;
+    top          : var(--surf-map-point-position-top);
+    left         : var(--surf-map-point-position-left);
+    animation    : currentPoint .5s infinite;
+}
+
+.surf-map-point-hidden {
+    display: none;
+}
+
+@keyframes currentPoint {
+    0% {
+        opacity     : 0;
+        border-width: 120%
+    }
+
+    100% {
+        border-width: 200%;
+        opacity     : 1;
+    }
+}
+
+@keyframes moveSlideEven {
+    0% {
+        margin-top: 25px
+    }
+
+    80% {
+        margin-top: 109px
+    }
+
+    100% {
+        margin-top: 89px
+    }
+}
+
+@keyframes moveSlideOdd {
+    0% {
+        margin-top: 89px
+    }
+
+    80% {
+        margin-top: 5px
+    }
+
+    100% {
+        margin-top: 25px
+    }
+}
+
+@media (max-width: 1199px) {
+
+    .surf-slider {
+        width: 900px;
+    }
+}
+
+@media (max-width: 950px) {
+    .surf {
+        background-size: 15%;
+
+        &-content-top-map {
+            margin-top: 280px;
+
+            &-point-description {
+                top   : -230px;
+                right : 0%;
+                border: 1px solid $light-gray;
+
+                &-location {
+                    text-align: center;
+                    margin    : 25px auto;
+
+                    &-title {
+                        font-size: $font-size-xxxl;
+                    }
+
+                    &-subtitle {
+                        font-size: $font-size-xxl;
+                    }
+                }
+
+                &-weather-count {
+                    font-size: $font-size-xxl;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 899px) {
+
+    .surf {
+
+        &-slider {
+            width: 600px;
+        }
+
+        &-content-top-map:after {
+            width    : auto;
+            height   : auto;
+            top      : 110%;
+            right    : 50%;
+            transform: rotate(360deg) translateX(50%);
+        }
+    }
+}
+
+@media (max-width: 630px) {
+
+    .surf {
+        background: none;
+
+        &-content-top-map {
+
+            &:after {
+                font-size     : $font-size-m;
+                letter-spacing: 3px;
+            }
+
+            &-point {
+                width       : 5px;
+                height      : 5px;
+                border-width: 5px;
+
+                &-description {
+                    min-height: 190px;
+
+                    &-location {
+                        margin-top: 15px;
+
+                        &-title {
+                            font-size: $font-size-xxl;
+                        }
+
+                        &-subtitle {
+                            font-size: $font-size-xl;
+                        }
+                    }
+
+                    &-weather {
+                        margin-top: 20px;
+
+                        &-count {
+                            font-size: $font-size-xl;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-slider-control-map-point {
+            width       : 5px;
+            height      : 5px;
+            border-width: 5px;
+        }
+    }
+}
+
+@media (max-width: 599px) {
+
+    .surf {
+
+        &-slider {
+            min-height: 525px;
+            width     : 300px;
+            margin-top: 0px;
+
+            &-container {
+                min-height: 525px;
+                margin-top: 0;
+            }
+
+            &-item {
+                background-position: 57% 30%;
+                min-height         : 400px;
+
+                &-btn {
+                    background-color: $main-btn-link-bg;
+                }
+
+                &-location {
+                    width      : auto;
+                    height     : auto;
+                    transform  : none;
+                    max-width  : 200px;
+                    white-space: normal;
+                    left       : 20px;
+                    bottom     : 200px;
+                    line-height: 1.5;
+
+                    &>span {
+                        display: none;
+                    }
+                }
+
+                &-title {
+                    margin-left: 85px;
+                    padding    : 30px 30px 30px 0;
+                }
+            }
+        }
+    }
+
+    .surf-slider-control-button {
+        margin-bottom: 0;
+    }
+}
+
+@media(max-width: 450px) {
+
+    .surf {
+
+        &-title:after {
+            font-size: 150px;
+        }
+
+        &-content-top {
+
+            &-location {
+                margin-bottom: 0;
+            }
+
+            &-map:after {
+                font-size: $font-size-xs;
+            }
+        }
+    }
+}

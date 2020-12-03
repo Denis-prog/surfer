@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Surf</title>
+<link href="assets/css/app.css" rel="stylesheet"></head>
+
+<body id="body">
+	<div id="modal-popup"></div>
+	<header class="header" id="header-page">
+		<div class="header-mobile">
+			<div class="header-mobile-container">
+				<input type="checkbox" id="headerMenuCheckbox" class="checkbox header-mobile-container-visuallyHidden">
+				<label for="headerMenuCheckbox">
+					<span id="header-mobile-container-visuallyHidden-button"
+						class="header-mobile-container-visuallyHidden-button">
+						<span class="header-mobile-container-visuallyHidden-button-item
+									header-mobile-container-visuallyHidden-button-item-1">
+						</span>
+						<span class="header-mobile-container-visuallyHidden-button-item
+							header-mobile-container-visuallyHidden-button-item-2">
+						</span>
+						<span class="header-mobile-container-visuallyHidden-button-item
+							header-mobile-container-visuallyHidden-button-item-3">
+						</span>
+						<span class="header-mobile-container-visuallyHidden-button-item
+							header-mobile-container-visuallyHidden-button-item-4">
+						</span>
+					</span>
+				</label>
+			</div>
+		</div>
+		<h1 class="header-title">
+			go
+			surf
+		</h1>
+		<div class="header-container-flex" id="headerActiveSlider">
+			<div class="header-aside" id="header-aside">
+				<a href="#" class="header-aside-logo">
+					<picture>
+						<source media="(min-width: 2000px)" srcset="./assets/img/header/header_logo_big.png">
+						<source media="(max-height: 970px)" srcset="./assets/img/header/header_logo_small.png">
+						<img src="./assets/img/header/header_logo.png" alt="Company logo">
+					</picture>
+				</a>
+				<nav class="header-aside-nav">
+					<ul class="header-aside-nav-list">
+						<li class="header-aside-nav-list-item">
+							<a href="#" class="header-aside-nav-list-item-link">
+								<div class="header-aside-nav-list-item-link-events"></div>
+								<object role="img" data="./assets/img/header/header_surf.svg"
+									class="header-aside-nav-list-item-link-icon header-aside-nav-list-item-link-color-icon-hover">
+								</object>
+								<p class="header-aside-nav-list-item-description">Surf</p>
+							</a>
+						</li>
+						<li class="header-aside-nav-list-item">
+							<a href="#" class="header-aside-nav-list-item-link">
+								<div class="header-aside-nav-list-item-link-events"></div>
+								<object role="img" data="./assets/img/header/header_travel.svg"
+									class="header-aside-nav-list-item-link-icon header-aside-nav-list-item-link-color-icon-hover">
+								</object>
+								<p class="header-aside-nav-list-item-description">Travel</p>
+							</a>
+						</li>
+						<li class="header-aside-nav-list-item">
+							<a href="#" class="header-aside-nav-list-item-link">
+								<div class="header-aside-nav-list-item-link-events"></div>
+								<object role="img" data="./assets/img/header/header_sleep.svg"
+									class="header-aside-nav-list-item-link-icon header-aside-nav-list-item-link-color-icon-hover">
+								</object>
+								<p class="header-aside-nav-list-item-description">Sleep</p>
+							</a>
+						</li>
+						<li class="header-aside-nav-list-item">
+							<a href="#" class="header-aside-nav-list-item-link">
+								<div class="header-aside-nav-list-item-link-events"></div>
+								<object role="img" data="./assets/img/header/header_shop.svg"
+									class="header-aside-nav-list-item-link-icon header-aside-nav-list-item-link-icon-shop header-aside-nav-list-item-link-color-icon-hover">
+								</object>
+								<p class="header-aside-nav-list-item-description">Shop</p>
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="header-aside-bottom">
+					<button class="header-aside-search btn-icon">
+						<i class="fa fa-search" aria-hidden="true"></i>
+					</button>
+					<div class="header-aside-date">
+						<p class="header-aside-date-day" id="header-aside-date-day"></p>
+						<p class="header-aside-date-month_year"><span id="header-aside-date-month"></span> | <span
+								id="header-aside-date-year"></span></p>
+					</div>
+					<p class="header-aside-location">California</p>
+				</div>
+			</div>
+			<section class="header-slider" id="header-slider">
+				<section class="header-slider-control">
+					<div class="header-slider-control-button" id="header-slider-control-button">
+						<button class="header-slider-control-button-left btn-icon" data-action="previousSlide"
+							data-slider="header" data-slider-button>
+							<i class="fa fa-arrow-left" aria-hidden="true"></i>
+						</button>
+						<button class="header-slider-control-button-right btn-icon" data-action="nextSlide"
+							data-slider="header" data-slider-button>
+							<i class="fa fa-arrow-right" aria-hidden="true"></i>
+						</button>
+					</div>
+					<div class="header-slider-control-map" id="header-slider-control-map">
+						<img src="./assets/img/header/header_slider_map.png" alt="map and points destination">
+						<div class="header-slider-control-map-point" id="header-slider-control-map-point"></div>
+					</div>
+				</section>
+				<section class="header-slider-view">
+					<div class="header-slider-view-content" id="header-slider-view-content">
+						<p class="header-slider-view-content-suptitle main-text-right-headline">Surf</p>
+						<h2 class="header-slider-view-content-title">North Shore</h2>
+						<p class="header-slider-view-content-subtitle main-text-right-headline">Condition</p>
+						<p class="header-slider-view-content-subtext">Radical</p>
+					</div>
+					<div class="header-slider-view-indication" id="header-slider-view-indication">
+						<div class="header-slider-view-indication-item header-indicator-active-slide">
+							<span class="header-slider-view-indication-item-count">01</span>
+							<span class="header-slider-view-indication-item-text">North Shore</span>
+						</div>
+						<div class="header-slider-view-indication-item">
+							<span class="header-slider-view-indication-item-count">02</span>
+							<span class="header-slider-view-indication-item-text">South Shore</span>
+						</div>
+						<div class="header-slider-view-indication-item">
+							<span class="header-slider-view-indication-item-count">03</span>
+							<span class="header-slider-view-indication-item-text">West Shore</span>
+						</div>
+						<div class="header-slider-view-indication-item">
+							<span class="header-slider-view-indication-item-count">04</span>
+							<span class="header-slider-view-indication-item-text">East Shore</span>
+						</div>
+					</div>
+				</section>
+			</section>
+		</div>
+		<div class="button-next-page" id="button-scroll-page">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</header>
+	<main>
+		<div class="container">
+			<section class="main-item-section surf" data-surfSection id="surfMainActiveSliderDecor">
+				<h2 class="surf-title main-title">Surf</h2>
+				<div class="main-item-section-content surf-content">
+					<div class="main-item-section-content-inner-top surf-content-top">
+						<div class="main-item-section-content-inner-top-subtitle
+						surf-content-top-location" id="surf-slider-view-content">
+							<p class="main-text-right-headline
+									main-text-left-headline-adaptive
+									main-text-right-headline-adaptive
+									main-text-left-headline">
+								Current location
+							</p>
+							<p class="surf-content-top-location-text main-text-right-head">
+								California
+								<span>|</span> USA</p>
+						</div>
+						<div class="surf-content-top-map" id="surf-slider-box-after"
+							data-content="34.0501 N -118.2446 W">
+							<img class="surf-content-top-map-img css-adaptive-img" src="./assets/img/surf/surf-map.svg"
+								alt="World map and points destination" />
+							<div class="surf-map-point-target surf-slider-control-map-point"
+								id="surf-slider-control-map-point">
+							</div>
+							<div class="surf-content-top-map-point surf-content-top-map-point-first surf-map-point-hidden"
+								data-points>
+							</div>
+							<div class="surf-content-top-map-point surf-content-top-map-point-second" data-points>
+							</div>
+							<div class="surf-content-top-map-point surf-content-top-map-point-third" data-points>
+							</div>
+							<div class="surf-content-top-map-point surf-content-top-map-point-fourth" data-points>
+							</div>
+							<div class="surf-content-top-map-point surf-content-top-map-point-fifth" data-points>
+							</div>
+							<div class="surf-content-top-map-point surf-content-top-map-point-sixth" data-points>
+							</div>
+							<div class="surf-content-top-map-point surf-content-top-map-point-seventh" data-points>
+							</div>
+							<div class="surf-content-top-map-point surf-content-top-map-point-eigth" data-points>
+							</div>
+							<div class="surf-content-top-map-point-description" id="surf-map-point-description-box">
+								<div class="surf-content-top-map-point-description-location">
+									<h3 class="surf-content-top-map-point-description-location-title">
+										Malibu Beach
+									</h3>
+									<p class="surf-content-top-map-point-description-location-subtitle">
+										USA
+									</p>
+								</div>
+								<div class="surf-content-top-map-point-description-weather">
+									<div class="surf-content-top-map-point-description-weather-wave
+												surf-content-top-map-point-description-weather-item">
+										<p class="surf-content-top-map-point-description-weather-wave-count
+												surf-content-top-map-point-description-weather-count">
+											9-13
+										</p>
+										<p class="surf-content-top-map-point-description-weather-wave-subtext
+												surf-content-top-map-point-description-weather-subtext">
+											Surf (FT)
+										</p>
+									</div>
+									<div class="surf-content-top-map-point-description-weather-tide
+											surf-content-top-map-point-description-weather-item">
+										<p class="surf-content-top-map-point-description-weather-tide-count
+												surf-content-top-map-point-description-weather-count">
+											+2.3
+										</p>
+										<p class="surf-content-top-map-point-description-weather-tide-subtext
+												surf-content-top-map-point-description-weather-subtext">
+											Tide (FT)
+										</p>
+									</div>
+									<div class="surf-content-top-map-point-description-weather-wind
+											surf-content-top-map-point-description-weather-item">
+										<p class="surf-content-top-map-point-description-weather-wind-count
+												surf-content-top-map-point-description-weather-count">
+											4 SE
+										</p>
+										<p class="surf-content-top-map-point-description-weather-wind-subtext
+												surf-content-top-map-point-description-weather-subtext">
+											Wind (KTS)
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="surf-slider-control-button main-slider-control-button"
+							id="surf-slider-control-button">
+							<button class="surf-slider-control-button-left main-slider-control-button-left btn-icon"
+								data-action="previousSlide" data-slider="surf" data-slider-button>
+								<i class="fa fa-arrow-left" aria-hidden="true"></i>
+							</button>
+							<button class="surf-slider-control-button-right main-slider-control-button-right btn-icon"
+								data-action="nextSlide" data-slider="surf" data-slider-button>
+								<i class="fa fa-arrow-right" aria-hidden="true"></i>
+							</button>
+						</div>
+					</div>
+					<div class="surf-slider-container">
+						<div class="surf-slider" id="surf-slider-carousel-box">
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="main-item-section travel" id="travelMainActiveSliderDecor">
+				<h2 class="travel-title main-title">Travel</h2>
+				<div class="main-item-section-content travel-content" id="travel-slider-view-location-bg">
+					<div class="main-item-section-content-inner-top travel-content-top">
+						<div class="main-item-section-content-inner-top-subtitle travel-content-top-location"
+							id="travel-slider-view-location">
+							<p class="main-text-left-headline-adaptive
+									main-text-right-headline-adaptive
+									main-text-left-headline
+									main-text-right-headline">
+								Current location</p>
+							<p class="travel-content-top-location-text main-text-right-head">California <span>|</span>
+								USA</p>
+						</div>
+						<div class="travel-slider-control-button main-slider-control-button"
+							id="travel-slider-control-button">
+							<button class="travel-slider-control-button-left main-slider-control-button-left btn-icon"
+								data-action="previousSlide" data-slider="travel" data-slider-button>
+								<i class="fa fa-arrow-left" aria-hidden="true"></i>
+							</button>
+							<button class="travel-slider-control-button-right
+										main-slider-control-button-right
+										btn-icon" data-action="nextSlide" data-slider="travel" data-slider-button>
+								<i class="fa fa-arrow-right" aria-hidden="true"></i>
+							</button>
+						</div>
+						<div class="main-item-section-content-inner-bottom travel-content-top-transport"
+							id="travel-slider-view-transport">
+							<p class="main-item-section-content-inner-bottom-text-left-headline 
+									main-text-left-headline-adaptive
+									main-text-left-headline
+									travel-content-top-transport-headline">
+								Airline</p>
+							<p class="main-item-section-content-inner-bottom-left-head
+									travel-content-top-transport-text main-text-left-head">
+								American Airlines</p>
+						</div>
+					</div>
+				</div>
+				<div class="main-section-bottom travel-content-bottom">
+					<div class="main-section-bottom-content travel-content-bottom-info"
+						id="travel-slider-view-transport-info">
+						<div class="main-section-bottom-content-item travel-content-bottom-info-item">
+							<p class="main-section-bottom-content-item-suptitle
+									travel-content-bottom-info-item-suptitle">
+								Destination
+							</p>
+							<p class="main-section-bottom-content-item-title
+									travel-content-bottom-info-item-title">
+								California USA
+							</p>
+						</div>
+						<div class="main-section-bottom-content-item
+								travel-content-bottom-info-item">
+							<p class="main-section-bottom-content-item-suptitle
+									travel-content-bottom-info-item-suptitle">
+								Distance
+							</p>
+							<p class="main-section-bottom-content-item-title
+									travel-content-bottom-info-item-title">
+								2,065 Miles
+							</p>
+						</div>
+						<div class="main-section-bottom-content-item
+								travel-content-bottom-info-item">
+							<p class="main-section-bottom-content-item-suptitle
+									travel-content-bottom-info-item-suptitle">
+								Travel Time
+							</p>
+							<p class="main-section-bottom-content-item-title
+									travel-content-bottom-info-item-title">
+								12 Hours 10 Minutes
+							</p>
+						</div>
+						<div class="main-section-bottom-content-item travel-content-bottom-info-item">
+							<p class="main-section-bottom-content-item-suptitle 
+									travel-content-bottom-info-item-suptitle">
+								Pricing
+							</p>
+							<P class="main-section-bottom-content-item-title
+									travel-content-bottom-info-item-title">
+								$976 USD
+								<span class="travel-content-bottom-info-item-title-subtext">
+									Round Trip
+								</span>
+							</P>
+						</div>
+					</div>
+				</div>
+				<div class="btn-link travel-btn-info">
+					<a href="#">
+						Book
+						<span>
+							Flight <i class="fa fa-arrow-right travel-btn-info-arrow" aria-hidden="true"></i>
+						</span>
+					</a>
+				</div>
+			</section>
+			<section class="main-item-section sleep" id="sleepMainActiveSliderDecor">
+				<h2 class="main-title sleep-title">Sleep</h2>
+				<div class="main-item-section-content sleep-content">
+					<div class="main-item-section-content-inner-top sleep-content-top">
+						<div class="main-item-section-content-inner-top-subtitle 
+								sleep-content-top-location" id="sleep-slider-view-location">
+							<p class="main-text-left-headline-adaptive
+									main-text-right-headline-adaptive
+									main-text-left-headline
+									main-text-right-headline">
+								Resorts
+							</p>
+							<p class="sleep-content-top-location-text main-text-right-head">
+								Malbec On The Creek
+								<span>|</span> USA
+							</p>
+						</div>
+						<div class="main-slider-control-button sleep-slider-control-button"
+							id="sleep-slider-control-button">
+							<button class="main-slider-control-button-left
+										btn-icon
+										sleep-slider-control-button-left" data-action="previousSlide" data-slider="sleep" data-slider-button>
+								<i class="fa fa-arrow-left" aria-hidden="true"></i>
+							</button>
+							<button class="main-slider-control-button-right
+										btn-icon
+										sleep-slider-control-button-right" data-action="nextSlide" data-slider="sleep" data-slider-button>
+								<i class="fa fa-arrow-right" aria-hidden="true"></i>
+							</button>
+						</div>
+						<div class="main-item-section-content-inner-bottom sleep-content-top-raiting"
+							id="sleep-slider-view-raiting-box">
+							<p class="main-item-section-content-inner-bottom-text-left-headline
+									main-text-left-headline
+									sleep-content-top-raiting-headline
+									main-text-left-headline-adaptive">
+								Rating
+							</p>
+							<div class="main-item-section-content-inner-bottom-left-head
+									main-text-left-head sleep-content-top-raiting-text">
+								Excellent
+								<div class="main-content-inner-raiting-visual
+										sleep-content-top-raiting-visual excellent">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="main-section-bottom sleep-content-bottom">
+						<div class="main-section-bottom-content sleep-content-bottom-book"
+							id="sleep-slider-view-book-info">
+							<div class="main-section-bottom-content-item
+									sleep-content-bottom-book-item" data-count-active-slide="0">
+								<p class="main-section-bottom-content-item-suptitle
+										sleep-content-bottom-book-item-suptitle">
+									Resort
+								</p>
+								<div class="sleep-content-bottom-book-item-title">
+									<p class="main-section-bottom-content-item-title">Malbec On The Creek</p>
+									<p class="main-section-bottom-content-item-title">USA</p>
+								</div>
+							</div>
+							<div class="main-section-bottom-content-item
+									sleep-content-bottom-book-item
+									sleep-content-bottom-book-item-nights">
+								<p class="main-section-bottom-content-item-suptitle
+										sleep-content-bottom-book-item-suptitle">
+									# of Nights
+								</p>
+								<div
+									class="main-section-bottom-content-item-title sleep-content-bottom-book-item-title">
+									<span id="sleep-book-nights">0</span> Nights
+									<p class="sleep-content-bottom-book-item-title-control"
+										id="sleep-book-item-title-control-night" data-count-active-slide="0">
+										<i class="fa fa-plus sleep-content-bottom-book-item-title-control-plus"
+											aria-hidden="true" data-option="night" data-action="increase"></i>
+										<i class="fa fa-minus sleep-content-bottom-book-item-title-control-minus"
+											aria-hidden="true" data-option="night" data-action="decrease"></i>
+									</p>
+								</div>
+							</div>
+							<div class="main-section-bottom-content-item
+									sleep-content-bottom-book-item
+									sleep-content-bottom-book-item-guests">
+								<p class="main-section-bottom-content-item-suptitle
+										sleep-content-bottom-book-item-suptitle">
+									# of Guests
+								</p>
+								<div class="main-section-bottom-content-item-title
+										sleep-content-bottom-book-item-title">
+									<span id="sleep-book-guests">0</span> Guests
+									<p class="sleep-content-bottom-book-item-title-control"
+										id="sleep-book-item-title-control-guest" data-count-active-slide="0">
+										<i class="fa fa-plus sleep-content-bottom-book-item-title-control-plus"
+											aria-hidden="true" data-option="guests" data-action="increase"></i>
+										<i class="fa fa-minus sleep-content-bottom-book-item-title-control-minus"
+											aria-hidden="true" data-option="guests" data-action="decrease"></i>
+									</p>
+								</div>
+							</div>
+							<div class="main-section-bottom-content-item
+									sleep-content-bottom-book-item
+									sleep-content-bottom-book-item-price">
+								<p class="main-section-bottom-content-item-suptitle
+										sleep-content-bottom-book-item-suptitle">
+									Pricing
+								</p>
+								<p class="main-section-bottom-content-item-title
+										sleep-content-bottom-book-item-title">
+									$<span id="sleep-book-price">0</span> USD
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="btn-link sleep-btn-info">
+					<a href="#">
+						Book
+						<span>
+							Stay <i class="fa fa-arrow-right sleep-slider-item-btn-arrow" aria-hidden="true"></i>
+						</span>
+					</a>
+				</div>
+			</section>
+			<section class="main-item-section shop" id="shopMainActiveSliderDecor">
+				<h2 class="shop-title main-title">Shop</h2>
+				<div class="main-item-section-content shop-content" id="shop-slider-view-location-bg">
+					<div class="main-item-section-content-inner-top shop-content-inner">
+						<div class="main-slider-control-button shop-slider-control-button"
+							id="shop-slider-control-button">
+							<button class="shop-slider-control-button-left
+										main-slider-control-button-left
+										btn-icon" data-action="previousSlide" data-slider="shop" data-slider-button>
+								<i class="fa fa-arrow-left" aria-hidden="true"></i>
+							</button>
+							<button class="shop-slider-control-button-right main-slider-control-button-right btn-icon"
+								data-action="nextSlide" data-slider="shop" data-slider-button>
+								<i class="fa fa-arrow-right" aria-hidden="true"></i>
+							</button>
+						</div>
+						<div class="shop-content-inner-order" id="shop-slider-order-box">
+							<div class="shop-content-inner-order-zoom" id="shop-content-inner-order-zoom">
+								<button class="shop-content-inner-order-zoom-close-btn" id="btn-close-view-zoom">
+									<i class="fa fa-times shop-content-inner-order-zoom-close-btn-icon"
+										aria-hidden="true"></i>
+								</button>
+								<img src="./assets/img/shop/shop_surfboard_zoom.png" alt="surfboard">
+								<p class="shop-content-inner-order-info-description-price">
+									$779 <sup>99</sup>
+								</p>
+								<div class="btn-link
+										shop-slider-btn-link
+										shop-content-inner-order-zoom-btn">
+									<a href="#">
+										Drop
+										<span>
+											In <i class="fa fa-arrow-right shop-slider-item-btn-arrow"
+												aria-hidden="true"></i>
+										</span>
+									</a>
+								</div>
+							</div>
+							<div class="shop-content-inner-order-info">
+								<div class="main-item-section-content-inner-bottom 
+										shop-content-inner-order-info-description">
+									<p class="main-item-section-content-inner-bottom-text-left-headline
+											main-text-left-headline 
+											shop-content-inner-order-info-description-headline">
+										Style
+									</p>
+									<div class="main-item-section-content-inner-bottom-left-head
+											main-text-left-head
+											shop-content-inner-order-info-description-text">
+										North Nugget TT
+										SurfboardNorth
+										<div class="main-content-inner-raiting-visual
+												shop-content-inner-order-info-description-raiting excellent">
+										</div>
+									</div>
+									<p class="shop-content-inner-order-info-description-price">
+										$779 <sup>99</sup>
+									</p>
+									<div class="btn-link shop-slider-btn-link">
+										<a href="#">
+											Drop
+											<span>
+												In <i class="fa fa-arrow-right shop-slider-item-btn-arrow"
+													aria-hidden="true"></i>
+											</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="shop-content-inner-order-view">
+								<button class="shop-content-inner-order-view-zoom" id="show-order-view-zoom">
+									<i class="fa fa-search-plus" aria-hidden="true"></i>
+								</button>
+								<picture>
+									<source media="(min-width: 601px)" srcset="./assets/img/shop/shop_surfboard.png">
+									<source media="(max-width: 450px)" srcset="./assets/img/shop/shop_surfboard_small.png">
+									<img src="./assets/img/shop/shop_surfboard.png" alt="surfboard">
+								</picture>
+								<div class="shop-content-inner-order-view-feature
+										shop-content-inner-order-view-feature-1" data-feature>
+									<input type="checkbox" class="shop-content-inner-order-view-feature-checkbox"
+										id="feature-1" data-feature-checkbox>
+									<label for="feature-1" class="shop-content-inner-order-view-feature-label">
+										<span class="shop-content-inner-order-view-feature-label-rectangle
+												shop-content-inner-order-view-feature-label-rectangle-1">
+										</span>
+										<span class="shop-content-inner-order-view-feature-label-rectangle
+												shop-content-inner-order-view-feature-label-rectangle-2">
+										</span>
+									</label>
+									<p class="shop-content-inner-order-view-feature-text
+											shop-content-inner-order-view-feature-text-1">
+										Double Concave with
+										Vee Shape low point
+									</p>
+								</div>
+								<div class="shop-content-inner-order-view-feature 
+										shop-content-inner-order-view-feature-2" data-feature>
+									<input type="checkbox" class="shop-content-inner-order-view-feature-checkbox"
+										data-feature-checkbox id="feature-2">
+									<label for="feature-2" class="shop-content-inner-order-view-feature-label">
+										<span class="shop-content-inner-order-view-feature-label-rectangle
+												shop-content-inner-order-view-feature-label-rectangle-1">
+										</span>
+										<span class="shop-content-inner-order-view-feature-label-rectangle
+												shop-content-inner-order-view-feature-label-rectangle-2">
+										</span>
+									</label>
+									<p class="shop-content-inner-order-view-feature-text
+											shop-content-inner-order-view-feature-text-2">
+										Ergonomic design
+									</p>
+								</div>
+								<div class="shop-content-inner-order-view-feature shop-content-inner-order-view-feature-3"
+									data-feature>
+									<input type="checkbox" class="shop-content-inner-order-view-feature-checkbox"
+										id="feature-3" data-feature-checkbox>
+									<label for="feature-3" class="shop-content-inner-order-view-feature-label">
+										<span class="shop-content-inner-order-view-feature-label-rectangle
+												shop-content-inner-order-view-feature-label-rectangle-1">
+										</span>
+										<span class="shop-content-inner-order-view-feature-label-rectangle
+												shop-content-inner-order-view-feature-label-rectangle-2">
+										</span>
+									</label>
+									<p class="shop-content-inner-order-view-feature-text
+											shop-content-inner-order-view-feature-text-3">
+										Bright color
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</main>
+	<footer class="footer">
+		<div class="btn-link footer-btn">
+			<a href="#header-page">
+				Go
+				<span>
+					Surf <i class="fa fa-arrow-right footer-btn-info-arrow" aria-hidden="true"></i>
+				</span>
+			</a>
+		</div>
+		<p class="footer-content">
+			<sup class="footer-content-copyright">&copy;</sup>
+			<span class="footer-content-text">Go-surf 2018. All rights reserved</span>
+		</p>
+	</footer>
+<script type="text/javascript" src="assets/js/app.js"></script></body>
+
+</html>

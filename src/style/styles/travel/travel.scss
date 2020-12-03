@@ -1,0 +1,128 @@
+:root {
+    --path: url("../img/travel/travel_airplane_american.png")
+}
+
+.travel {
+
+    &-title {
+        &:after {
+            content: "travel"
+        }
+    }
+
+    &-slider-control-button {
+        margin: 0 50px 250px auto;
+    }
+
+    &-content {
+        background-image   : var(--path);
+        animation-name     : moveAirplanOne;
+        background-position: 100% 60%;
+        animation-duration : 1s;
+
+        &-top {
+            background     : url("../img/travel/travel_landscape_bg.png") left top no-repeat;
+            background-size: 100% 95%;
+
+            &-location {
+                margin-bottom: 150px;
+            }
+        }
+
+        &-bottom {
+            background: url("../img/travel/travel_coctail_bg.png") right 0 no-repeat;
+            min-height: 450px;
+            margin-top: 80px;
+
+            &-info {
+                min-height: 250px;
+
+                &-item-title-subtext {
+                    text-align: right;
+                    display   : block;
+                    font-size : $font-size-s-default;
+                }
+            }
+        }
+    }
+}
+
+@keyframes moveAirplanOne {
+    from {
+        background-position: 300% 60%;
+    }
+
+    to {
+        background-position: 100% 60%;
+    }
+}
+
+@keyframes moveAirplanTwo {
+    from {
+        background-position: 300% 60%;
+    }
+
+    to {
+        background-position: 100% 60%;
+    }
+}
+
+@media(max-width: 899px) {
+
+    .travel {
+
+        &-content {
+            background-size: 70%;
+        }
+    }
+}
+
+@media(max-width: 830px) {
+
+    .travel-content-bottom {
+        background: none;
+        min-height: auto;
+
+        &-info {
+            padding     : 0;
+            margin-right: 5%;
+        }
+    }
+}
+
+@media(max-width: 600px) {
+
+    .travel-content-bottom {
+        margin-right: 25%;
+
+        &-info {
+
+            &-item {
+                margin-bottom: 20px;
+
+                &-title-subtext {
+                    text-align: left;
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 451px) {
+
+    .travel {
+
+        padding-bottom: 120px;
+
+        &-title:after {
+            font-size: 103px;
+            left     : 25px;
+            top      : 20px;
+        }
+
+        &-slider-control-button {
+            margin: -87px 50px 185px auto;
+        }
+    }
+}

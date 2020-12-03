@@ -1,0 +1,138 @@
+.sleep {
+    &-title {
+
+        &:after {
+            content: "sleep"
+        }
+    }
+
+    &-slider-control-button {
+        margin     : 0px 20px 350px auto;
+        position   : static;
+    }
+
+    &-content {
+
+        background: url('../img/sleep/sleep_bg_1.png') left top no-repeat;
+
+        &-top {
+            background: url("../img/sleep/sleep_bg_3.png") 100% 109% no-repeat,
+                url("../img/sleep/sleep_bg_2.png") 100% 86% no-repeat;
+        }
+
+        &-bottom {
+            background: url("../img/sleep/sleep_book_bg.png") right bottom no-repeat;
+            margin-top: 80px;
+            min-height: 400px;
+
+            &-book {
+                min-height: 350px;
+
+                &-item {
+                    width: 100%;
+
+                    &-title-control {
+                        text-align: right;
+                        color     : $sleep-book-item-title-control-color;
+                        font-size : $font-size-xl;
+                        margin-top: 10px;
+
+                        &-plus,
+                        &-minus {
+                            cursor: pointer;
+                        }
+
+                        &-plus {
+                            margin-right: 10%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.excellent {
+    width: 170px;
+}
+
+.good {
+    width: 135px;
+}
+
+.fair {
+    width: 105px;
+}
+
+.adequate {
+    width: 70px;
+}
+
+.poor {
+    width: 35px;
+}
+
+@media(max-width: 900px) {
+
+    .sleep-content-top {
+        background-size: 22% 30%, 60% 30%;
+    }
+}
+
+@media(max-width: 600px) {
+
+    .sleep-content {
+
+        &-bottom-book {
+            min-height  : auto;
+            margin-right: 25%;
+
+            &-item {
+                margin-bottom: 20px;
+            }
+        }
+
+        &-top {
+            background   : none;
+            margin-bottom: 150px;
+            min-height   : auto;
+        }
+    }
+}
+
+@media(max-width: 452px) {
+
+    .sleep {
+
+        padding-bottom: 120px;
+
+        &-title:after {
+            font-size: 135px;
+        }
+
+        &-content {
+            background-position: 35% 0%;
+
+            &-top {
+
+                &-raiting {
+                    width: 100%;
+
+                    &-text {
+                        text-align: center;
+                    }
+
+                    &-visual {
+                        display: block;
+                        margin : 10px auto 0;
+                    }
+                }
+            }
+        }
+
+        &-slider-control-button {
+            margin-right : auto;
+            margin-bottom: 200px;
+        }
+    }
+}

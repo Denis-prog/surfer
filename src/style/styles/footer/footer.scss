@@ -1,0 +1,61 @@
+.footer {
+    &-btn {
+
+        &>a {
+            font-size: $font-size-xxxl;
+
+            &>span {
+                padding: 10px 10px 10px 12px;
+
+                &:before {
+                    left : 2px;
+                    width: 15px;
+                }
+            }
+        }
+    }
+
+    &-content {
+        text-align : center;
+        margin     : 20px 0 50px;
+        font-weight: 300;
+
+        &-copyright {
+            font-size: $font-size-s-default
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .footer {
+        &-btn {
+
+            &>a {
+                font-size: $font-size-xxl;
+                
+                &>span:before {
+                    left : 2px;
+                    width: 15px;
+                }
+            }
+        }
+
+        &-content {
+            margin     : 10px 0 30px;
+            font-weight: 300;
+
+            &-copyright {
+                font-size: $font-size-s-default
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .footer {
+        &-btn {
+            position  : static;
+            background: none;
+        }
+    }
+}
